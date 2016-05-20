@@ -1,0 +1,22 @@
+{
+  "name": "awesome_project",
+  "version": "1.0.0",
+  "description": "Your awesome project description",
+  "main": "gulpfile.js",
+  "directories": {},
+  "dependencies": {
+    "babel-core": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "gulp": "^3.9.1",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
