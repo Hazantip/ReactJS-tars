@@ -22,8 +22,8 @@ const ExampleTwo = React.createClass({
 //);
 
 
-export default ExampleTwo;
-
 // ############### ATTENTION ###############
 // Этот компонент ЗНАЕТ о компоненте modules/example/example
-console.log( 'example2', $('.helloExample') );
+console.log( 'example2', $('.helloExample').html(), $('.helloExample3').html() );
+
+export default ExampleTwo;
