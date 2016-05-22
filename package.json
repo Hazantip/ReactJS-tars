@@ -13,7 +13,9 @@
     "react": "^15.0.2",
     "react-dom": "^15.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jquery": "^2.2.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -18,19 +18,22 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
 // TODO: как сделать чтоб это не грузилось на странице на которой не нужно)))
-import exampleBuild_NameNotImportant from 'modules/exampleBuild/exampleBuild';
+// import exampleBuild_NameNotImportant from 'modules/exampleBuild/exampleBuild';
 
 var Timer = React.createClass({
 	getInitialState: function() {
 		return {
-			timeLeft: this.props.duration
+			timeLeft: this.props.duration,
+			timePassed: 0
 		}
 	},
 	tick() {
 		if (this.state.timeLeft > 0) {
-			let i = this.state.timeLeft;
-			i--;
-			this.setState( {timeLeft: i} )
+			let left = this.state.timeLeft;
+			let passed = this.state.timePassed + 1 ;
+			left--;
+			this.setState( {timeLeft: left} );
+			this.setState( {timePassed: passed} );
 		} else {
 			clearInterval( this.timer );
 		}
@@ -42,7 +45,10 @@ var Timer = React.createClass({
 		clearInterval( this.timer );
 	},
 	render: function () {
-		return <div>{this.state.timeLeft} seconds left.</div>
+		return <div>
+			<div>{this.state.timeLeft} seconds left.</div>
+			<div>{this.state.timePassed} seconds passed.</div>
+		</div>
 	}
 });
 
